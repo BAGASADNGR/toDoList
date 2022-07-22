@@ -3,9 +3,12 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     const todo = document.querySelector('input').value;
     const vlu = document.querySelector("input");
-    add(todo);
+    if(todo == ""){
+        alert("masukkan")
+    } else {
+        add(todo);
+    }
     vlu.value = "";
-    // sel(todo);
 })
 
 function add(todo){
@@ -24,11 +27,3 @@ function add(todo){
     })
 
 }
-// on progress
-// function sel(todo){
-//     if(todo == "") {
-//         const lisel = document.createElement("li");
-//         lisel.textContent = "Anda tidak memasukkan apapun!"
-//         ul.appendChild(lisel);
-//     } else{}
-// }
