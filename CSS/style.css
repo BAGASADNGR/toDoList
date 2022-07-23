@@ -4,6 +4,21 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.mtcard {
+    width: 100%;
+    height: 100%;
+    Background-color:rgb(0,0,0);
+	Background-color:rgba(0,0,0,0.7);
+    position: absolute;
+    display: none;
+}
+.card{
+    margin: 15% 40%;
+    position: absolute;
+    text-align: center;
+    background-color: lightpink;
+    display: none;
+}
 .container{
     max-width: 992px;
     height: auto;
@@ -49,7 +64,7 @@ form button {
     border-radius: 8px;
 }
 #ul {
-    width: 90%;
+    width: 95%;
     height: auto;
     margin: auto;
     overflow: hidden;
@@ -88,5 +103,8 @@ li{
 @media screen and (max-width: 576px) {
     .container {
         width: 95%;
+    }
+    .card {
+        margin: 35% 14%;
     }
 }

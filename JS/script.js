@@ -3,8 +3,15 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     const todo = document.querySelector('input').value;
     const vlu = document.querySelector("input");
+    const mtCard = document.querySelector(".mtcard");
+    const card = document.querySelector(".card");
     if(todo == ""){
-        alert("masukkan")
+        mtCard.style.display = "block"
+        card.style.display = "block"
+        window.addEventListener("click", function (){
+            mtCard.style.display = "none"
+            card.style.display = "none"
+        })
     } else {
         add(todo);
     }
@@ -18,7 +25,7 @@ function add(todo){
     const ul = document.getElementById("ul");
     ul.appendChild(list)
 
-    // del function
+    // del button function
     const del = document.createElement("button");
     del.textContent = "X"
     list.appendChild(del);
